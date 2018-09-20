@@ -2,3 +2,18 @@ h1 a {
     color: #F07205;
     font-family: 'Lobster';
 }
+
+
+.parallax {
+    /* The image used */
+    background-image: url("maj.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
