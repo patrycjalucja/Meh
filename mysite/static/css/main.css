@@ -1,0 +1,45 @@
+h1 a {
+    color: #F07205;
+    font-family: 'Lobster';
+}
+
+
+.parallax {
+    /* The image used */
+    background-image: url("/maj.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header +.bgnd {
+height: 86 vh;
+}
+
+.bgnd {
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 54vh;
+    max-height: 1200px;
+    min-height: 200px;
+}
+
+.bgnd-1 {
+background-image: url("/maj.jpg");
+}
+
+.bgnd-2 {
+background-image: url("/maj2.jpg");
+}
+
+.bgnd-3 {
+background-image: url("/maj3.jpg");
+}
