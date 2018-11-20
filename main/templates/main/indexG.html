@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+{% load static %}
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width">
+    <link href="/static/css/styleG.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="{% static '/js/scripts.js' %}"></script>
+
+    <title>Patrycja & Karol</title>
+</head>
+<body>
+
+
+<div id="linkmenu" class="menu">
+    <div class="menubutton nazwa"> Patrycja & Karol</div>
+    <a href="#linkinfo">
+        <div class="menubutton button1">aktualności</div>
+    </a>
+    <a href="#linkdojazd">
+        <div class="menubutton button2">dojazd</div>
+    </a>
+    <a href="#linkform">
+        <div class="menubutton button3">potwierdzenie</div>
+    </a>
+    <a href="#linkcontact">
+        <div class="menubutton button4">kontakt</div>
+    </a>
+</div>
+
+
+<div class="welcome">
+    <div class="words">Do naszego wesela zostało tylko
+        <script type="text/javascript"
+                src="//www.deszczowce.pl/skrypty/odliczanie/odliczanie.php?size=28&text=&y=2019&transparent=1&m=3&d=27&min=0&h=15&s=0&theme=czarny&note=1&mode=0"></script>
+
+
+        <a href="#linkform">
+            <div class="actionbutton">Potwierdź przybycie!</div>
+        </a></div>
+    <img class="imgmain" src="/static/css/ST.jpg">
+</div>
+
+
+<div id="linkinfo" class="infoflex">
+
+
+    <div class="news">
+        {% block content %} {% endblock %}
+
+    </div>
+    <img class="imgnews imgnews1" src="/static/css/ST2.jpg"/>
+</div>
+<div class="arrowholder">
+    <a href="#linkmenu">
+        <div class="arrow"><i class="fas fa-angle-up"></i></br>menu</div>
+    </a>
+</div>
+
+<div class="welcome cakeflex">
+    <div class="words"> Widzimy się niedługo!</div>
+    <img class="imgmain" src="/static/css/my.jpg">
+</div>
+
+<div id="linkdojazd" class="infoflex dojazdflex">
+    <div class="news">
+        <h2>Kościół</h2>
+        O godzinie 15:00 w kościele p.w. św. Józefa w Krakowie będziemy ślubować sobie miłość, wierność i uczciwość
+        małżeńską.
+
+        <h2>Sala</h2>
+        Wesele odbędzie się w Pałacu w Śmiłowiacach.
+
+        <h2>Hotel</h2>
+        Pałac w Śmiłowicach posiada kilkadziesiąt miejsc noclegowych. Jeśli jesteś zainteresowany rezerwacją pokoju,
+        skontaktuj się z nami.
+
+        <h2>Dojazd</h2>
+        Planujemy zorganizować transport spod kościoła do sali, a potem, w godzinach nocnych, bus będzie kursował w
+        drugą stronę. Jeżeli chciałbyś skorzystać - daj znać.
+
+    </div>
+    <div class="mapholder">
+        <div class="map">
+            <iframe width="100%" height="100%"
+                    src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Kościół św. Józefa w Rynku Podgórskim&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
+                    href="https://www.google.com/maps/place/Ko%C5%9Bci%C3%B3%C5%82+%C5%9Bw.+J%C3%B3zefa+w+Rynku+Podg%C3%B3rskim/@50.0433063,19.9477047,17z/data=!3m1!4b1!4m5!3m4!1s0x47165b5b4d5ddb2b:0x4b0247a14b4aec18!8m2!3d50.0433029!4d19.9498934?hl=en">Embed
+                Google Map</a></iframe>
+        </div>
+        <br/>
+        <div class="map">
+            <iframe width="100%" height="100%"
+                    src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Pałac Śmiłowice&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
+                    href="https://www.google.pl/maps/place/Pa%C5%82ac+%C5%9Ami%C5%82owice/@50.1454875,20.4443335,17z/data=!3m1!4b1!4m5!3m4!1s0x47163388cc86c9b3:0x9a44069d44a2dc4d!8m2!3d50.1454841!4d20.4465222/">Embed
+                Google Map</a></iframe>
+        </div>
+        <br/>
+    </div>
+</div>
+<div class="arrowholder">
+    <a href="#linkmenu">
+        <div class="arrow"><i class="fas fa-angle-up"></i></br>menu</div>
+    </a>
+</div>
+
+<div class="welcome giftflex">
+    <div class="words"><i> Nie wiem, dokąd prowadzi moja droga, ale czuję się lepiej, gdy trzymasz mnie za rękę. </i>
+        <br> Alfred de Musset</br></div>
+    <img class="imgmain" src="/static/css/my2.jpg">
+</div>
+
+<div id="linkform" class="infoflex">
+    <div class="news">
+        <h2>Potwierdź przybycie!</h2>
+        Miejsce na formularz </br>
+        Miejsce na formularz </br>
+        Miejsce na formularz </br>
+        Miejsce na formularz </br>
+        Miejsce na formularz </br>
+        Miejsce na formularz </br>
+        Miejsce na formularz </br>
+        Miejsce na formularz </br>
+
+    </div>
+    <img class="imgnews imgnews1" src="/static/css/ST3.jpg"/>
+</div>
+<div class="arrowholder">
+    <a href="#linkmenu">
+        <div class="arrow"><i class="fas fa-angle-up"></i></br>menu</div>
+    </a>
+</div>
+
+
+<div class="welcome flowerflex">
+    <div class="words"><i> Nie wystarczy pokochać, trzeba jeszcze umieć wziąć tę miłość w ręce i przenieść ją przez całe
+        życie. </i> <br> K.I.Gałczyński
+    </div>
+    <img class="imgmain" src="/static/css/ST.jpg">
+</div>
+
+<div id="linkcontact" class="infoflex">
+    <div class="news">
+        <h2>Skontaktuj się z nami!</h2>
+        <h2>Patrycja</h2>
+        Telefon:
+
+        <h2>Karol</h2>
+        Telefon:
+
+    </div>
+    <img class="imgnews imgnews1" src="/static/css/ST2.jpg"/>
+</div>
+<div class="arrowholder">
+    <a href="#linkmenu">
+        <div class="arrow"><i class="fas fa-angle-up"></i></br>menu</div>
+    </a>
+</div>
+
+
+</body>
+</html>
