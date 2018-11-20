@@ -6,19 +6,3 @@ urlpatterns = [
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
 
 ]
-
-"""
-@ajax
-def cos():
-    c = 1 + 3
-    print("cos dziala")
-    return HttpResponse("hejjj")
-
-
-cos()
-
-
-class SimpleView(AJAXMixin, TemplateView):
-    template_name = 'post_list.html'
-
-"""
