@@ -75,10 +75,12 @@
         małżeńską.
 
         <h2>Sala</h2>
-        Wesele odbędzie się w Pałacu w Śmiłowiacach.
+        Wesele odbędzie się w Pałacu w Śmiłowicach koło Nowego Brzeska.
 
         <h2>Hotel</h2>
-        Pałac w Śmiłowicach posiada kilkadziesiąt miejsc noclegowych. Jeśli jesteś zainteresowany rezerwacją pokoju,
+        Pałac w Śmiłowicach posiada kilkadziesiąt miejsc noclegowych. W przypadku dużego zapotrzebowania część gości
+        zostanie rozlokowana w położonym nieopodal hotelu św. Norberta w Hebdowie. Jeśli jesteś zainteresowany
+        rezerwacją pokoju,
         skontaktuj się z nami.
 
         <h2>Dojazd</h2>
@@ -121,14 +123,21 @@
 <div id="linkform" class="infoflex">
     <div class="news">
         <h2>Potwierdź przybycie!</h2>
-        Miejsce na formularz </br>
-        Miejsce na formularz </br>
-        Miejsce na formularz </br>
-        Miejsce na formularz </br>
-        Miejsce na formularz </br>
-        Miejsce na formularz </br>
-        Miejsce na formularz </br>
-        Miejsce na formularz </br>
+        <form action="post" name="confirm_guest">
+            <div name="dane">
+                Imię:
+                <input type="text" name="firstname" required> <br>
+                Nazwisko:
+                <input type="text" name="secondname" required> <br>
+            </div>
+            <input type="checkbox" id="night" name="night"> <label for="night">Zgłaszam chęć noclegu</label> <br>
+            <input type="checkbox" id="bus" name="bus"> <label for="bus">Skorzystam z transferu z i do Krakowa</label>
+            <br>
+            Uwagi:
+            <input type="text" id="uwagi" name="uwagi"><br>
+            <input type="submit" value="Potwierdzam przybycie!">
+
+        </form>
 
     </div>
     <img class="imgnews imgnews1" src="/static/css/ST3.jpg"/>

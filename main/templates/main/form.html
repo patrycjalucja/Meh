@@ -1,0 +1,15 @@
+{% block content %}
+<form action="post" name="confirm_guest">
+    <div name="dane">
+        Imię:
+        <input type="text" name="firstname"> <br>
+        Nazwisko:
+        <input type="text" name="secondname"> <br>
+    </div>
+    <input type="checkbox" id="night" name="night"> <label for="night">Zgłaszam chęć noclegu</label>
+    <input type="checkbox" id="bus" name="bus"> <label for="bus">Skorzystam z transferu z i do Krakowa</label>
+    <input type="submit" value="Potwierdź przyjście">
+
+</form>
+
+{% endblock %}
