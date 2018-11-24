@@ -30,7 +30,7 @@ h1 a {
     background-image: url("/static/css/maj.jpg");
 
     /* Set a specific height */
-    height: 500px;
+    height: 400px;
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
