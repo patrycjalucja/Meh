@@ -123,18 +123,20 @@
 <div id="linkform" class="infoflex">
     <div class="news">
         <h2>Potwierdź przybycie!</h2>
-        <form action="post" name="confirm_guest">
+        <form action="post" name="confirm_guest" id="confirm_guest" method="post">
+            {% csrf_token %}
             <div name="dane">
                 Imię:
-                <input type="text" name="firstname" required> <br>
+                <input type="text" name="name" id="name" required> <br>
                 Nazwisko:
-                <input type="text" name="secondname" required> <br>
+                <input type="text" name="surname" id="surname" required> <br>
             </div>
-            <input type="checkbox" id="night" name="night"> <label for="night">Zgłaszam chęć noclegu</label> <br>
+            <input type="checkbox" id="overnight" name="overnight"> <label for="overnight">Zgłaszam chęć noclegu</label>
+            <br>
             <input type="checkbox" id="bus" name="bus"> <label for="bus">Skorzystam z transferu z i do Krakowa</label>
             <br>
             Uwagi:
-            <input type="text" id="uwagi" name="uwagi"><br>
+            <input type="text" id="comments" name="comments"><br>
             <input type="submit" value="Potwierdzam przybycie!">
 
         </form>

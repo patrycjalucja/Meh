@@ -76,7 +76,7 @@ a {
 	flex-basis:45vw;
 	text-align:justify;
 	margin-left:10vw;
-	margin-bottom:50vh;
+	margin-bottom:30vh;
 /*	text-shadow: 0px 0px 10px rgba(40, 40, 40, 0.2);  */
 }
 
@@ -125,7 +125,7 @@ box-shadow: 0px 0px 15px 0px rgba(255,255,255,1);
 }
 .news h2 {
 	text-align:center;
-	margin:5vh;
+	margin:10vh;
 }
 .news {
 	flex-basis:45vw;
@@ -196,7 +196,7 @@ width:25vw;
 
 }
 .giftflex .words {
-	margin-bottom:4vh;
+	margin-bottom:10vh;
 }
 
 .flowerflex {
@@ -205,7 +205,7 @@ width:25vw;
 	background-position:0 -20vh;
 }
 .flowerflex .words {
-	margin-bottom:4vh;
+	margin-bottom:50vh;
 }
 
 
