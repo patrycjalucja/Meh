@@ -28,7 +28,6 @@ def submit_button(request):
         print('ok')
 
     message = generate_mail(form)
-
     return HttpResponse('Tresc maila: ' + message)
 
 
