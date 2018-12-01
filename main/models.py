@@ -16,4 +16,27 @@ class Trial(models.Model):
         return self.title
 
 
+class GuestManager(models.Manager):
+    def create_guest(self, name, surname, comments, bus, overnight):
+        guest = self.create(name=name, surname=surname, comments=comments, bus=bus, overnight=overnight)
+        return guest
 
+
+class Guest(models.Model):
+    name = models.CharField(max_length=100)
+    surname = models.CharField(max_length=50)
+    bus = models.BooleanField()
+    overnight = models.BooleanField()
+    comments = models.CharField(max_length=1000)
+
+    objects = GuestManager()
+
+    def add(self, name, surname, comments, bus=False, overnight=False):
+        self.name = name
+        self.surname = surname
+        self.comments = comments
+        self.bus = bus
+        self.overnight = overnight
+
+    def __str__(self):
+        return self.name + " " + self.surname

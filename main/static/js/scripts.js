@@ -1,5 +1,5 @@
 $(document).ready( function() {
-    $("#about-btn").click( function(event) {
-        alert("You clicked the button using JQuery!");
+    $("#submit").click( function(event) {
+        alert("Dziękujemy za potwierdzenie, do zobaczenia! :)");
     });
 });
