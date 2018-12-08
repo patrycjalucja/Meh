@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="{% static '/js/scripts.js' %}"></script>
 
@@ -109,7 +110,7 @@
 </div>
 <div class="arrowholder">
     <a href="#linkmenu">
-        <div class="arrow"><i class="fas fa-angle-up"></i></br>menu</div>
+        <div class="arrow"><i class="fas fa-angle-up"></i><br>menu</div>
     </a>
 </div>
 
@@ -122,8 +123,8 @@
 
 <div id="linkform" class="infoflex">
     <div class="news">
-        <h2>Potwierdź przybycie!</h2>
         <form action="post" name="confirm_guest" id="confirm_guest" method="post">
+            <h2>Potwierdź przybycie!</h2>
             {% csrf_token %}
             <div name="dane">
                 Imię:
@@ -140,6 +141,8 @@
             <input type="submit" value="Potwierdzam przybycie!">
 
         </form>
+        <div id="thanks">
+        </div>
 
     </div>
     <img class="imgnews imgnews1" src="/static/css/ST3.jpg"/>

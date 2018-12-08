@@ -17,13 +17,18 @@ def post_detail(request, pk):
 
 
 def submit_button(request):
+    if request.is_ajax:
+        print("mamy ajaxa!!!")
+    else:
+        print("nie ma ajaxa")
     if request.method == 'POST':
+        print(request.POST)
         form = GuestForm(request.POST)
     else:
         form = GuestForm(request.GET)
     if form.is_valid():
         print('ok')
-
+    #    message = "wszystko ok"
     message = generate_mail(form)
     return HttpResponse('Dzięki za potwierdzenie! \n '
                         'Tresc maila: ' + message)
