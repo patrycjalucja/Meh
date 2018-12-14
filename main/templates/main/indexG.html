@@ -121,29 +121,39 @@
     <img class="imgmain" src="/static/css/my2.jpg">
 </div>
 
+
 <div id="linkform" class="infoflex">
     <div class="news">
+        <h2>Potwierdź przybycie!</h2>
         <form action="post" name="confirm_guest" id="confirm_guest" method="post">
-            <h2>Potwierdź przybycie!</h2>
             {% csrf_token %}
-            <div name="dane">
+            <div class="dane" name="dane">
                 Imię:
-                <input type="text" name="name" id="name" required> <br>
+                <input type="text" name="name" class="inp" id="name" required placeholder="Jan"> <br>
                 Nazwisko:
-                <input type="text" name="surname" id="surname" required> <br>
+                <input type="text" name="surname" class="inp" id="surname" required placeholder="Kowalski"> <br>
             </div>
-            <input type="checkbox" id="overnight" name="overnight"> <label for="overnight">Zgłaszam chęć noclegu</label>
-            <br>
-            <input type="checkbox" id="bus" name="bus"> <label for="bus">Skorzystam z transferu z i do Krakowa</label>
-            <br>
-            Uwagi:
-            <input type="text" id="comments" name="comments"><br>
-            <input type="submit" value="Potwierdzam przybycie!">
+            <label class="container">
+                <input type="checkbox" id="overnight" name="overnight"><label for="overnight">Zgłaszam chęć
+                noclegu</label>
+                <span class="checkmark"></span>
+            </label>
+
+            <label class="container">
+                <input type="checkbox" id="bus" name="bus"><label for="bus">Skorzystam z transferu z i do
+                Krakowa</label>
+                <span class="checkmark"></span>
+            </label>
+
+            <div class="dane">
+                Uwagi:
+
+                <input type="text" class="inp" id="comments" name="comments"
+                       placeholder="Na przykład imię i nazwisko osoby towarzyszącej :)"><br></div>
+            <input class="submit" type="submit" value="Potwierdzam przybycie!">
 
         </form>
-        <div id="thanks">
-        </div>
-
+        <div id="thanks"></div>
     </div>
     <img class="imgnews imgnews1" src="/static/css/ST3.jpg"/>
 </div>

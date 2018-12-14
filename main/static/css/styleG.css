@@ -89,6 +89,8 @@ a {
 
 .welcomemain .words {
 margin-bottom: 20vh;
+
+
 }
 
 .imgmain {
@@ -225,6 +227,125 @@ width:25vw;
 }
 
 
+
+
+/** FORMULARZ **/
+
+/* Czekboxy */
+.container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+
+
+  .container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+  }
+
+
+  .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+  }
+
+
+  .container:hover input ~ .checkmark {
+	background-color: #ccc;
+  }
+
+
+  .container input:checked ~ .checkmark {
+	background-color: rgba(107,102,130,1);
+  }
+
+
+  .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+  }
+
+
+  .container input:checked ~ .checkmark:after {
+	display: block;
+  }
+
+
+  .container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+  }
+/* button */
+
+.submit {
+	color:white;
+	font-size:1.5rem;
+	line-height:3rem;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-align:center;
+	display:block;
+	background:rgba(107,102,130,1);
+	border:none;
+	border-radius:.5rem;
+	padding-left:1rem;
+	padding-right:1rem;
+	width:50%;
+	margin-left:25%;
+	margin-top:3rem;
+
+
+	-webkit-box-shadow: 0px 0px 9px 2px rgba(51,51,51,0.25);
+box-shadow: 0px 0px 9px 2px rgba(51,51,51,0.25);
+-webkit-transition: 0.5s;
+}
+
+.submit:hover {
+	background:rgba(107,102,130,.8);
+}
+
+/* POla tekstowe */
+.inp {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.inp:focus {
+    border: 3px solid rgba(107,102,130,1);
+}
+
+
+.dane {
+	text-align: center;
+}
 
 
 
