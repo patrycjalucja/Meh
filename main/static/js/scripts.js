@@ -27,8 +27,9 @@ function csrfSafeMethod(method) {
 }//source of above: https://gist.github.com/hugollm/f51953cf66e4e7d0701fc187b0c3eeb6
 
 
-
    $(document).ready(function() {
+
+
 
        $("#confirm_guest").submit(function(event){
        event.preventDefault();

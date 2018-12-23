@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html xmlns:margin="http://www.w3.org/1999/xhtml">
 {% load static %}
 <head>
     <meta charset="UTF-8"/>
@@ -13,6 +13,7 @@
     <script type="text/javascript"> window.CSRF_TOKEN = "{{ csrf_token }}"; </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript" src="{% static '/js/scripts.js' %}"></script>
+
 
     <title>Patrycja & Karol</title>
 </head>
@@ -38,10 +39,46 @@
 
 <div class="welcome">
     <div class="words">Do naszego ślubu zostało
-        <script type="text/javascript"
-                src="//www.deszczowce.pl/skrypty/odliczanie/odliczanie.php?size=28&text=&y=2019&transparent=1&m=3&d=27&min=0&h=15&s=0&theme=czarny&note=1&mode=0"></script>
+        <div id="timer">
+            <div id="days" class="digit"></div>
+            <div id="hours" class="digit"></div>
+            <div id="minutes" class="digit"></div>
+            <div id="seconds" class="digit">
 
+            </div>
+            <script type="text/javascript">
+function makeTimer() {
 
+			var endTime = new Date("27 April 2019 15:00:00 GMT+01:00");
+			endTime = (Date.parse(endTime) / 1000);
+
+			var now = new Date();
+			now = (Date.parse(now) / 1000);
+
+			var timeLeft = endTime - now;
+
+			var days = Math.floor(timeLeft / 86400);
+			var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+			var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+			var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+			if (hours < "10") { hours = "0" + hours; }
+			if (minutes < "10") { minutes = "0" + minutes; }
+			if (seconds < "10") { seconds = "0" + seconds; }
+
+			$("#days").html(days + "<span> dni,</span>");
+			$("#hours").html(hours + "<span> godzin,</span>");
+			$("#minutes").html(minutes + "<span> minut,</span>");
+			$("#seconds").html(seconds + "<span> sekund :)</span>");
+
+	}
+
+	setInterval(function() { makeTimer(); }, 1000);
+
+            </script>
+        </div>
+
+        <br><br>
         <a href="#linkform">
             <div class="actionbutton">Potwierdź przybycie!</div>
         </a></div>
@@ -176,13 +213,12 @@
     <div class="news">
         <h2>Skontaktuj się z nami!</h2>
         <h2>Patrycja</h2>
-        Telefon:
-
+        Telefon: +48 530 793 594
         <h2>Karol</h2>
-        Telefon:
-
+        Telefon: +48 691 755 236
+        <h2>#sytyglaz</h2>
     </div>
-    <img class="imgnews imgnews1" src="/static/css/KazimierzD.JPG"/>
+    <img class="imgnews imgnews1" src="/static/css/rocznica.JPG"/>
 </div>
 <div class="arrowholder">
     <a href="#linkmenu">
@@ -192,4 +228,5 @@
 
 
 </body>
+
 </html>

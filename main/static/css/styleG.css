@@ -326,6 +326,7 @@ box-shadow: 0px 0px 9px 2px rgba(51,51,51,0.25);
 	background:rgba(107,102,130,.8);
 }
 
+
 /* POla tekstowe */
 .inp {
     width: 100%;
@@ -346,6 +347,7 @@ box-shadow: 0px 0px 9px 2px rgba(51,51,51,0.25);
 .dane {
 	text-align: center;
 }
+
 
 
 
@@ -391,7 +393,7 @@ box-shadow: 0px 0px 9px 2px rgba(51,51,51,0.25);
 	}
 	.words {
 		margin-top:10vh;
-	}
+8	}
 	.welcome .imgmain {
 		margin-top:10vh;
 	}
@@ -418,6 +420,15 @@ justify-content:center;
 	}
 
 }
+
+.digit{
+		float:left;
+		width:33%;
+		font-size:3rem;
+
+	}
+
+
 
 /* PIONOWY DUZY */
 @media screen and (orientation:portrait) and (min-device-width: 480px)
@@ -474,5 +485,4 @@ justify-content:center;
 }
 
 }
-
 
